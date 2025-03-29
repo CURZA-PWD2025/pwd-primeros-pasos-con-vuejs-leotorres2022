@@ -23,12 +23,13 @@ function GuardarDatos(){
     Nombre: ${Usuario.nombre}
     Email: ${Usuario.email}
     Password: ${Usuario.password}
+    Fecha de Nacimiento: ${Usuario.nacim}
     Edad:${Usuario.edad}
    
   `;
 
     alert ( datosUsuario)
-    alert("Usuario Creado Correcto")
+    alert("Usuario Creado Correcto" )
 
    nombre.value=""
    email.value=""
@@ -61,7 +62,7 @@ function CalcularEdad(){
   <input type="password" v-model="password"></input> <br>
   <label >Ingrese la Fecha de Nacimiento   </label>
   <input type="date" v-model="nacim" id="nacimiento"></input> <br>
-  <button type="button" @click="GuardarDatos"> Guardar  </button>
+  <button type="button" @click="GuardarDatos" class="guardar"> Guardar  </button>
  
   </div>
   <div>
@@ -79,8 +80,18 @@ function CalcularEdad(){
 </template>
 
 <style scoped>
-.read-the-docs {
-  color: #888;
-}
 
+.form{
+  background-color: aqua;
+  height: 200px;
+  width: 500px;
+  padding: auto;
+
+}
+.guardar{
+padding-inline: auto;
+}
+.guardar:hover{background-color: aquamarine;
+
+}
 </style>
